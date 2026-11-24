@@ -20,24 +20,39 @@ case ":$PATH:" in
     *) export PATH="$DOTFILES_DIR/bin:$PATH" ;;
 esac
 
-source "$DOTFILES_DIR/bash/bash_functions"
-source "$DOTFILES_DIR/bash/bash_aliases"
+. "$DOTFILES_DIR/bash/bash_functions"
+. "$DOTFILES_DIR/bash/bash_aliases"
 
 # Default destination for the home command.
-home="$HOME"
+#home="$HOME"
 
 # Machine-specific settings and overrides, outside the repo.
-[[ ! -f "$HOME/.bashrc.local" ]] || source "$HOME/.bashrc.local"
+[[ ! -f "$HOME/.bashrc.local" ]] || . "$HOME/.bashrc.local"
+
+#COMMENT IF OMNISHELL USED
+type_out "Welcome to JOJO Industries (TM) Omnishell"
+sleep 0.2
+type_out "Initializing..."
+
+#STARTUP
+cd ~/
+sleep 0.7
+clear
+
+if command -v fastfetch >/dev/null 2>&1; then
+    fastfetch
+fi
+
+printf "\n"
+type_out "Use command 'halp' for tips."
+printf "\n"
+
+force_color_prompt=yes
 
 # Optional startup display, once per shell.
-if [[ ${DOTFILES_BANNER:-0} == 1 && -z ${_DOTFILES_BANNER_SHOWN:-} ]]; then
-    _DOTFILES_BANNER_SHOWN=1
+# if [[ ${DOTFILES_BANNER:-0} == 1 && -z ${_DOTFILES_BANNER_SHOWN:-} ]]; then
+#     _DOTFILES_BANNER_SHOWN=1
 
-    if command -v fastfetch >/dev/null 2>&1; then
-        fastfetch
-    else
-        printf '%s\n' 'Welcome to JOJO Industries (TM) Omnishell'
-    fi
 
-    type_out "Use command 'halp' for tips."
-fi
+
+# fi
