@@ -1,0 +1,1 @@
+grep -rC 3 special_attack /some/path/to/a/game/directory

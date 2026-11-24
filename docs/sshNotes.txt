@@ -1,0 +1,17 @@
+ls -a = shows hidden
+
+ssh-keygen
+public and private keys
+
+-The public key encrypts data and is shared with everyone. 
+-The private key is used to decrypt the data
+
+Lets say Miles send something over the ssh channel to teach. The public key encrypts the message so other people don't know what it is. Teach decrypts it with his private key.
+
+You multiply two large prime numbers together 
+Difficult to take result and figure out what the prime numbers were
+
+cat something.txt | cut -d " " -f -1 | sort | uniq  | wc <- (wordcount)
+
+-type f
+grep
