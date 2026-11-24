@@ -85,3 +85,6 @@ halp() {
         declare -F
     } | less
 }
+truehalp() {
+    less "$DOTFILES_DIR/bash/help.txt"
+}

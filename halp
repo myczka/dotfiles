@@ -1,0 +1,24 @@
+printf "#NOTES\n"
+printf "> var '$home' prints out full path to (home)\n"
+println "> the line 'grep -r "my_phrase" . > all_of_my_phrase.txt' is dope"
+println "> use help commmand and stuff cuz it tell you stuff about built-ins"
+
+println
+
+printf "#COMMANDS\n"
+cat ~/.bash_aliases
+
+println 
+
+printf "#VIM\n"
+println "> need fill in"
+
+println
+
+printf "#TODO\n"
+printf "> make an interpreter in bash script for this file lowkey\n"
+printf "> add a search mechanism for this file's output command\n"
+printf "> finish config vimrc\n"
+printf "> plz use [type] command more, it tells you about different commands\n"
+printf "> Learn about wc command and grep and find and sed and awk\n"
+
